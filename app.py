@@ -20,8 +20,6 @@ def endpoint2():
     number_of_people = calculate_humans(download_path)
     cleanup_memory(download_path)
     return '<h1>Number of people on the downloaded photo: ' + str(number_of_people) + '</h2>'
-
-
 @app.route('/endpoint3', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
