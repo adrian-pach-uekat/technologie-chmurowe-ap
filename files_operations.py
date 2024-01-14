@@ -4,6 +4,7 @@ import requests
 UPLOAD_FOLDER = '/'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
+
 def download_image(image_url):
     download_path = 'downloaded_image.jpg'
     img_data = requests.get(image_url).content
@@ -11,6 +12,7 @@ def download_image(image_url):
         handler.write(img_data)
 
     return download_path
+
 
 def allowed_file(filename):
     return '.' in filename and \
